@@ -47,5 +47,6 @@ workflows:
   CI-CD-workflow:
     jobs:
       -  create_infrastructure
-      -  configure_infrastructure
-          depends on [create_infrastructure]
+      -  configure_infrastructure :
+           requires :
+             - create_infrastructure]
